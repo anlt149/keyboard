@@ -1,158 +1,127 @@
 {
-    "name": "ruin21",
-    "vendorId": "0x342D",
-    "productId": "0xE403",
-    "keycodes": ["qmk_lighting"],
-    "menus": [
-      {
-        "label": "Lighting",
-        "content": [
-          {
-            "label": "Backlight",
-            "content": [
-              {
-                "label": "Brightness",
-                "type": "range",
-                "options": [0, 200],
-                "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
-              },
-              {
-                "label": "Effect",
-                "type": "dropdown",
-                "content": ["id_qmk_rgb_matrix_effect", 3, 2],
-                "options": [
-                  ["All Off", 0],
-                  ["solid_color", 1],
-                  ["alphas_mods", 2],
-                  ["gradient_up_down", 3],
-                  ["gradient_left_right", 4],
-                  ["breathing", 5],
-                  ["band_sat", 6],
-                  ["band_val", 7],
-                  ["band_pinwheel_sat", 8],
-                  ["band_pinwheel_val", 9],
-                  ["band_spiral_sat", 10],
-                  ["band_spiral_val", 11],
-                  ["cycle_all", 12],
-                  ["cycle_left_right", 13],
-                  ["cycle_up_down", 14],
-                  ["cycle_out_in", 15],
-                  ["cycle_out_in_dual", 16],
-                  ["moving_chevron", 17],
-                  ["cycle_pinwheel", 18],
-                  ["cycle_spiral", 19],
-                  ["dual_beacon", 20],
-                  ["rainbow_beacon", 21],
-                  ["rainbow_pinwheels", 22],
-                  ["raindrops", 23],
-                  ["jellybean_raindrops", 24],
-                  ["hue_breathing", 25],
-                  ["hue_pendulum", 26],
-                  ["hue_wave", 27],
-                  ["pixel_fractal", 28],
-                  ["pixel_flow", 29],
-                  ["pixel_rain", 30],
-                  ["typing_heatmap", 31],
-                  ["digital_rain", 32],
-                  ["solid_reactive_simple", 33],
-                  ["solid_reactive", 34],
-                  ["solid_reactive_wide", 35],
-                  ["solid_reactive_multiwide", 36],
-                  ["solid_reactive_cross", 37],
-                  ["solid_reactive_multicross", 38],
-                  ["solid_reactive_nexus", 39],
-                  ["solid_reactive_multinexus", 40],
-                  ["splash", 41],
-                  ["multisplash", 42],
-                  ["solid_splash", 43],
-                  ["solid_multisplash", 44]
-                ]
-              },
-              {
-                "showIf": "{id_qmk_rgb_matrix_effect} != 0",
-                "label": "Effect Speed",
-                "type": "range",
-                "options": [0, 255],
-                "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
-              },
-              {
-                "showIf": "{id_qmk_rgb_matrix_effect} != 0",
-                "label": "Color",
-                "type": "color",
-                "content": ["id_qmk_rgb_matrix_color", 3, 4]
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "matrix": { "rows": 6, "cols": 15 },
-    "customKeycodes":[
-        {"name":"BT_HOST1","title":"BT_HOST1","shortName":"BT_HOST1"},
-        {"name":"BT_HOST2","title":"BT_HOST2","shortName":"BT_HOST2"},
-        {"name":"BT_HOST3","title":"BT_HOST3","shortName":"BT_HOST3"},
-        {"name":"BT_2_4G","title": "BT_2_4G","shortName":"BT_2_4G"},
-        {"name":"BT_USB","title":  "BT_USB","shortName":"BT_USB"}
-      ],
-    "layouts": {
-      "keymap":[
-        [
-          {
-            "c": "#aaaaaa"
-          },
-          "0,0",
-          "0,1",
-          "0,2",
-          "0,3"
-        ],
-        [
-          {
-            "y": 0.25
-          },
-          "1,0",
-          "1,1",
-          "1,2",
-          "1,3"
-        ],
-        [
-          {
-            "c": "#cccccc"
-          },
-          "2,0",
-          "2,1",
-          "2,2",
-          {
-            "c": "#aaaaaa",
-            "h": 2
-          },
-          "2,3"
-        ],
-        [
-          {
-            "c": "#cccccc"
-          },
-          "3,0",
-          "3,1",
-          "3,2"
-        ],
-        [
-          "4,0",
-          "4,1",
-          "4,2",
-          {
-            "c": "#777777",
-            "h": 2
-          },
-          "4,3"
-        ],
-        [
-          {
-            "c": "#cccccc",
-            "w": 2
-          },
-          "5,0",
-          "5,2"
-        ]
+  "name": "S21",
+  "vendorId": "0x342d",
+  "productId": "0xE543",
+  "keycodes": ["qmk_lighting"],
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+              "options": [
+                ["All Off", 0],
+                ["Alphas Mods", 2],
+                ["Breathing", 5],
+                ["Band Sat", 6],
+                ["Band Pinwheel Val", 9],
+                ["Cycle Left Right", 13],
+                ["Rainbow Moving Chevron", 15],
+                ["Cycle Out In", 16],
+                ["Jellybean Raindrops", 24],
+                ["Hue Breathing", 25],
+                ["Hue Pendulum", 26],
+                ["Pixel Flow", 29],
+                ["Pixel Fractal", 30],
+                ["Solid Reactive Simple", 33],
+                ["Solid Reactive", 34],
+                ["Solid Reactive Wide", 35],
+                ["Solid Splash", 43],
+                ["Close All", 45]
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 24 && {id_qmk_rgb_matrix_effect} != 28 && {id_qmk_rgb_matrix_effect} != 29 && {id_qmk_rgb_matrix_effect} != 32",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+          ]
+        }
       ]
     }
+  ],
+  "matrix": {"rows": 6, "cols": 4},
+  "customKeycodes": [
+    {"name": "DEV BT1","title": "DEV BT1","shortName": "DEV BT1"},
+    {"name": "DEV BT2","title": "DEV BT2","shortName": "DEV BT2"},
+    {"name": "DEV BT3","title": "DEV BT3","shortName": "DEV BT3"},
+    {"name": "DEV 2.4G","title": "DEV 2.4G","shortName": "DEV 2.4G"},
+    {"name": "DEV USB","title": "DEV USB","shortName": "DEV USB"},
+    {"name": "HS_BATQ", "title": "BATQ",  "shortName": "BATQ"},
+    {"name": "Side light mode switch",   "title": "Side light mode switch", "shortName": "RL_MOD"},
+    {"name": "Keyboard connection mode switch",   "title": "Keyboard connection mode switch", "shortName": "WIR_MOD"},
+    {"name": "Display test white",   "title": "Display test white", "shortName": "KC_TESTW"},
+    {"name": "Frequency test",   "title": "Frequency test", "shortName": "FREQU_T"},
+    {"name": "Bluetooth no secret pairing channel",   "title": "Bluetooth no secret pairing channel", "shortName": "BT_TEST"},
+    {"name": "Indicator LED On/Off",   "title": "Indicator LED On/Off", "shortName": "LED_TOG"}
+  ],
+  "layouts": {
+    "keymap":
+    [
+      [
+        "0,0\n`",
+        "0,1\n1",
+        "0,2\n2",
+        "0,3\n3"
+      ],
+      [
+        {
+          "y": 0.25
+        },
+        "1,0",
+        "1,1",
+        "1,2",
+        "1,3"
+      ],
+      [
+        "2,0",
+        "2,1",
+        "2,2",
+        {
+          "h": 2
+        },
+        "2,3"
+      ],
+      [
+        "3,0",
+        "3,1",
+        "3,2"
+      ],
+      [
+        "4,0",
+        "4,1",
+        "4,2",
+        {
+          "h": 2
+        },
+        "5,3"
+      ],
+      [
+        {
+          "w": 2
+        },
+        "5,1",
+        "5,2"
+      ]
+    ]
   }
+}
